@@ -18,7 +18,7 @@ public class MainActivity extends ActionBarActivity implements
     private TabsPagerAdapter adapter;
     private ActionBar actionBar;
 
-    private String[] tabs = {"Home Menu", "Berita & Info", "Promosi"};
+    private String[] tabs = new String[3];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,10 @@ public class MainActivity extends ActionBarActivity implements
 
         viewPager.setAdapter(adapter);
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+
+        tabs[0] = "Home Menu";
+        tabs[1] = "Berita & Info";
+        tabs[2] = "Promosi";
 
         for (String tab_name : tabs) {
             actionBar.addTab(actionBar.newTab().setText(tab_name)
