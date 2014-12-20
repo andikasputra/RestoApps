@@ -1,6 +1,8 @@
 package com.bytech.controls;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import android.content.ContentValues;
@@ -88,6 +90,30 @@ public class CatsLogic implements CatsInterface {
         db.close();
 
         return list;
+    }
+
+    public String[] getCatsTitle(){
+
+        SQLiteDatabase db = database.getWritableDatabase();
+        Cursor cur = db
+                .rawQuery(
+                        "Select _id, cats_name From cats Where cats_type <= 3 order by cats_type", null);
+
+
+        String title = "";
+        int i =0;
+        if (cur.moveToFirst()) {
+            do {
+                String sp = (i>0)?";":"";
+                title += sp+cur.getString(cur.getColumnIndex("cats_name"));
+                i++;
+            } while (cur.moveToNext());
+        }
+
+        cur.close();
+        db.close();
+
+        return title.split(";");
     }
 
     public void remove() {

@@ -11,14 +11,17 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.bytech.controls.CatsLogic;
+import com.bytech.models.Cats;
+
+import java.util.List;
+
 public class MainActivity extends ActionBarActivity implements
         ActionBar.TabListener {
 
     private ViewPager viewPager;
     private TabsPagerAdapter adapter;
     private ActionBar actionBar;
-
-    private String[] tabs = new String[3];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,11 +35,8 @@ public class MainActivity extends ActionBarActivity implements
         viewPager.setAdapter(adapter);
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
-        tabs[0] = "Home Menu";
-        tabs[1] = "Berita & Info";
-        tabs[2] = "Promosi";
-
-        for (String tab_name : tabs) {
+        CatsLogic c = new CatsLogic(this);
+        for (String tab_name : c.getCatsTitle()) {
             actionBar.addTab(actionBar.newTab().setText(tab_name)
                     .setTabListener(this));
         }
