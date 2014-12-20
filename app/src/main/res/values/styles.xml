@@ -1,0 +1,23 @@
+<resources>
+
+    <style name="AppTheme" parent="@style/Theme.AppCompat">
+        <item name="android:actionBarStyle">@style/ActionBar</item>
+        <item name="android:actionBarTabStyle">@style/MainActionBarTab</item>
+        <item name="android:actionBarTabBarStyle">@style/MainActionBar</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="MainActionBarTab" parent="@android:style/Widget.Holo.Light.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator</item>
+    </style>
+
+    <style name="MainActionBar" parent="@android:Widget.Holo.Light.ActionBar.TabBar">
+        <item name="android:showDividers">middle</item>
+        <item name="android:dividerPadding">0dp</item>
+    </style>
+
+    <style name="ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/actionbar_bg_color</item>
+    </style>
+
+</resources>

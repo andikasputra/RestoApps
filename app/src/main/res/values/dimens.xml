@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_h1">32dp</dimen>
+    <dimen name="text_h2">28dp</dimen>
+    <dimen name="text_h3">22dp</dimen>
+    <dimen name="text_h4">18dp</dimen>
+    <dimen name="text_normal">14dp</dimen>
+    <dimen name="text_small">11dp</dimen>
+</resources>

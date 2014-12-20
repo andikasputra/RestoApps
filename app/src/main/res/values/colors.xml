@@ -1,0 +1,7 @@
+<resources>
+    <color name="bg_tab_indicator_unselected_border">#333333</color>
+    <color name="bg_tab_indicator_selected_border">#66BB6A</color>
+    <color name="bg_tab_indicator">#333333</color>
+
+    <color name="bg_actionbar">#43A047</color>
+</resources>    
